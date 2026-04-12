@@ -46,23 +46,15 @@ graph LR
 
 ## 🌟 Key Production Features
 
-**Self-Correcting Agent Loop** — Pydantic schema enforcement + retry logic ensures valid outputs; graceful degradation to pharmacist review
-
-**Async Multi-Agent Orchestration** — Non-blocking parallel processing; 60+ Rx/hour throughput per instance; no concurrent state mutations
-
-**LangSmith Full-Trace Observability** — Every agent node decorated with @traceable; captures cost, latency, tokens; full failure replay capability
-
-**DeepEval Ground-Truth Evaluation** — 20+ sample prescriptions with known outcomes; clinical accuracy, counseling quality, label accuracy scored on every PR; CI/CD blocks merge if accuracy drops below 92%
-
-**Cost + Latency Metrics** — Prometheus tracks tokens used, USD cost, wall-clock time per agent; Grafana dashboard shows p50/p95 latency, HITL trigger rate, cost per prescription
-
-**PostgreSQL Checkpointing** — Full state persistence across server restarts; audit trail of every state transition; replay workflows from any checkpoint
-
-**RAG Layer with pgvector** — Drug monographs + interactions embedded in vector DB; clinical agent retrieves context instead of hallucinating; RAGAS evaluation for retrieval faithfulness
-
-**React HITL Dashboard** — Pharmacist queue view, side-by-side prescription comparison, digital signature capture, real-time SSE status updates, risk flags highlighted
-
-**HIPAA Audit Logging** — Every state change timestamped and versioned; patient_id hashed (no PII); immutable append-only log structure
+- **Self-Correcting Agent Loop** — Pydantic schema enforcement + retry logic ensures valid outputs; graceful degradation to pharmacist review
+- **Async Multi-Agent Orchestration** — Non-blocking parallel processing; 60+ Rx/hour throughput per instance; no concurrent state mutations
+- **LangSmith Full-Trace Observability** — Every agent node decorated with @traceable; captures cost, latency, tokens; full failure replay capability
+- **DeepEval Ground-Truth Evaluation** — 20+ sample prescriptions with known outcomes; clinical accuracy, counseling quality, label accuracy scored on every PR; CI/CD blocks merge if accuracy drops below 92%
+- **Cost + Latency Metrics** — Prometheus tracks tokens used, USD cost, wall-clock time per agent; Grafana dashboard shows p50/p95 latency, HITL trigger rate, cost per prescription
+- **PostgreSQL Checkpointing** — Full state persistence across server restarts; audit trail of every state transition; replay workflows from any checkpoint
+- **RAG Layer with pgvector** — Drug monographs + interactions embedded in vector DB; clinical agent retrieves context instead of hallucinating; RAGAS evaluation for retrieval faithfulness
+- **React HITL Dashboard** — Pharmacist queue view, side-by-side prescription comparison, digital signature capture, real-time SSE status updates, risk flags highlighted
+- **HIPAA Audit Logging** — Every state change timestamped and versioned; patient_id hashed (no PII); immutable append-only log structure
 
 ## 📦 Installation & Setup
 
@@ -104,34 +96,6 @@ Tested against **500 real prescriptions** over 2 weeks:
 
 **Business Impact:** 1 pharmacist handles 8-10x more prescriptions. Hospital of 500 Rx/day saves **~80 hours/week**. Compliance: zero violations across 500 test cases.
 
-## 🎯 What This Proves
-
-This system demonstrates **Principal Engineer thinking**, not a tutorial demo:
-
-| What You See | What It Signals |
-|---|---|
-| Badges + Docker | Production-grade development tools |
-| Mermaid diagram | Clear system thinking at a glance |
-| @traceable observability | Every LLM call is debuggable, costs tracked |
-| DeepEval CI/CD gate | You measure quality, not guess |
-| Prometheus + Grafana | You run systems, not just code |
-| PostgreSQL checkpointer | You handle real production requirements |
-| pgvector RAG + RAGAS | You know retrieval systems deeply |
-| React dashboard + SSE | You think about users & compliance |
-| HIPAA audit logging | You understand regulated industries |
-
-**Bottom Line:** This is the difference between $60k junior and $200k+ senior/staff engineer roles.
-
-## 🤝 Contributing
-
-**Code Standards:** PEP 8 + Black formatting, type hints required, docstrings on all functions, 80%+ test coverage
-
-**Testing & Quality:**
-- Unit tests: `pytest tests/unit_tests/ -v`
-- Integration tests: `pytest tests/integration_tests/ -v`
-- Evaluation: `deepeval test run tests/eval/prescription_dataset.py --threshold 0.92`
-- Coverage: `pytest tests/ --cov=src`
-
 ## 📁 Project Structure
 
 ```
@@ -148,7 +112,6 @@ mediassist/
 │   ├── unit_tests/         # Agent & utility tests
 │   ├── integration_tests/  # End-to-end workflows
 │   └── eval/               # DeepEval ground-truth fixtures
-├── dashboard/              # React + TypeScript UI
 ├── static/                 # Legacy HTML dashboard
 ├── pyproject.toml          # Dependencies
 └── README.md               # You are here
@@ -165,18 +128,5 @@ mediassist/
 ## 📝 License
 
 MIT License - See [LICENSE](LICENSE)
-
-## 👤 Contact
-
-- **Name:** [Your Name]
-- **LinkedIn:** [Your LinkedIn Profile]
-- **Email:** [your.email@domain.com]
-- **Location:** [City, Country] — Available for [EST/CET/other] timezone
-- **Experience:** [Years] years building production AI systems
-
----
-
-**Status:** ✨ **Production Ready**  
-**Last Updated:** April 12, 2026 | **Version:** 1.0.0
 
 Built with ❤️ using **LangGraph** • **FastAPI** • **Google Gemini** • **PostgreSQL**
