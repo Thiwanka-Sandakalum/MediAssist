@@ -1,9 +1,12 @@
 # MediAssist: AI-Powered Pharmacy Workflow Agent
-
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Docker Support](https://img.shields.io/badge/docker-supported-brightgreen.svg)](https://docker.com)
 [![FastAPI](https://img.shields.io/badge/FastAPI-latest-green.svg)](https://fastapi.tiangolo.com)
+[![LangGraph](https://img.shields.io/badge/LangGraph-multi--agent-orange.svg)](https://langchain.com)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-HIPAA--compliant-blue.svg)](https://postgresql.org)
+[![React](https://img.shields.io/badge/React-TypeScript-61dafb.svg)](https://react.dev)
+[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-Turbo-red.svg)](https://ai.google.dev)
 
 > **Production-ready multi-agent system that processes prescriptions 85% faster (2.6 seconds) with 99%+ accuracy, combining LLM orchestration, clinical validation, inventory management, and pharmacist oversight in a single HIPAA-compliant pipeline.**
 
